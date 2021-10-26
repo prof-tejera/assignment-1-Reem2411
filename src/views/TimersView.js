@@ -1,43 +1,54 @@
 import React from "react";
-import styled from "styled-components";
-
+// import styled from "styled-components";
+import Panel from "../components/Panel/Panel";
 import Stopwatch from "../components/timers/Stopwatch";
 import Countdown from "../components/timers/Countdown";
 import XY from "../components/timers/XY";
 import Tabata from "../components/timers/Tabata";
+// import DisplayTime from "../components/DisplayTime/DisplayTime";
+// import DisplayRounds from "../components/DisplayRounds/DisplayRounds";
+// import TimerButtons from "../TimerButtons/TimerButtons";
+// import Screen from "../components/screen/Screen";
 
-const Timers = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;
+import './TimersView.css';
 
-const Timer = styled.div`
-  border: 1px solid gray;
-  padding: 20px;
-  margin: 10px;
-  font-size: 1.5rem;
-`;
-
-const TimerTitle = styled.div``;
+// const Timers = styled.div`
+//   padding: 20px;
+//   width: 320px;
+//   height: 150px;
+//   display: flex;
+//   flex-wrap:  wrap;
+//   align-items: right;
+//   background: white; 
+// `;
 
 function App() {
   const timers = [
-    { title: "Stopwatch", C: <Stopwatch /> },
-    { title: "Countdown", C: <Countdown /> },
-    { title: "XY", C: <XY /> },
-    { title: "Tabata", C: <Tabata /> },
+    { C: <Stopwatch /> },
+    { C: <Countdown /> },
+    { C: <XY /> },
+    { C: <Tabata /> },
   ];
-
+  
   return (
-    <Timers>
+    <Panel>
+      {/* <Stopwatch
+      onClick={() => {
+        // <Panel className="MainTimerView">
+        //   <DisplayTime/>
+        //   <TimerButtons/>
+        // </Panel>
+        console.log('TimersView - StopWatch Clicked');
+        this.setState({
+          currentTimer: true,
+        });
+      }}  
+      /> */}
+
       {timers.map((timer) => (
-        <Timer>
-          <TimerTitle>{timer.title}</TimerTitle>
-          {timer.C}
-        </Timer>
+        timer.C
       ))}
-    </Timers>
+    </Panel>
   );
 }
 
