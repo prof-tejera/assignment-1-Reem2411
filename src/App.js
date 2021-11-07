@@ -30,7 +30,7 @@ function App() {
             <DocumentationView />
           </Route>
           <Route path="/">
-            <TimersView />
+            <TimersView/>
           </Route>
         </Switch>
       </Router>

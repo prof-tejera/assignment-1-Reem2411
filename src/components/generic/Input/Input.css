@@ -1,0 +1,10 @@
+.Default-input {
+    margin: 10px;
+    border: none;
+    display:flex;
+    height:34px;
+    border-radius:22px;
+    width:220px;
+    padding:0 18px; 
+    
+  }

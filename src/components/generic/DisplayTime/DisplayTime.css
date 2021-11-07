@@ -1,0 +1,23 @@
+.TimerButton{
+    width: 300px;
+    bottom: 0px;
+}
+
+.Timer{
+    display: flex;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid rgb(195, 244, 248);
+    width: 300px;
+    height: 313px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    background-color: white;
+    
+}
+
+span{
+    font-size: 30px;
+}
